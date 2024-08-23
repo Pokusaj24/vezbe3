@@ -1,0 +1,10 @@
+Kreirati bazu sa tabelom Klijent sa poljima user, pass i ručno popuniti nekoliko Klijenata u bazu, 					(05 bodova)
+Kreirati KlijentDAO klasu sa metodama:			
+o	void updatePass (String user, String pass): update-uje password svim Klijentima u bazi čiji je username user           (10 bodova)
+Kreirati index.php  sa formom za prosleđivanje parametara user i pass na  Kontroler pomoću tabele. 					(05 bodova)
+Kreirati  Kontroler koji u : 					(10 bodova)
+o	doPost sa prosleđenim parametrima update-uje password u bazi I prosledi Klijenta sa novim parametrima user i pass preko sesije na prkaz.php, u suprotnom vraća odgovarajuće poruke na index.php
+o	doGet radi „LOGOUT“ i poništava sesiju i vraća klijenta na index.php  						
+Kreirati prikaz.php prikazuje user i pass Klijenata preko sesije ako postoji sesija, u suptrotnom radi se se redirekcija na index.php
+Link za logout koji briše sesiju i vraća na index.                  (10 bodova)
+Povezani DAO,  KONTROLER i PHP koji rade 	 (10 bodova)
