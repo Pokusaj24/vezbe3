@@ -1,0 +1,21 @@
+<?php
+require 'flight/Flight.php';
+require '../DAO.php';
+
+Flight::route('GET /klijent/@user', function($user){
+    $dao=new DAO();
+    echo json_encode($dao->getKlijentbyUsername($user));
+});
+Flight::route('GET /klijent/@user', function($user){
+    $dao=new DAO();
+    echo json_encode($dao->userPostoji($user));
+});
+Flight::route('PUT /klijent/', function(){
+    $dao = new DAO();
+
+    $user = Flight::request()->data->user;
+    $pass = Flight::request()->data->pass;
+
+    echo json_encode($dao->updatePass($user,$pass));
+});
+Flight::start();
